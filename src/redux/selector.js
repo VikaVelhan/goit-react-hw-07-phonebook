@@ -5,14 +5,16 @@ export const getIsLoading = state => state.contacts.isLoading;
 export const getError = state => state.contacts.error;
 export const getFilter = state => state.filter.filter;
 
-/*export const getFilteredContacts = createSelector(
-  getContacts,
-  getFilter,
-  (contacts, filterValue) => {
-    const normalizedFilter = filterValue.toLowerCase();
-
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
-    );
+export const filtredContacts = ({ contacts, filter }) => {
+  if (!filter) {
+    return contacts.items;
   }
-);*/
+  const normalizedFilter = filter.toLowerCase();
+  const result = contacts.items.filter(({ name, phone }) => {
+    return (
+      name.toLowerCase().includes(normalizedFilter) ||
+      phone.toLowerCase().includes(normalizedFilter)
+    );
+  });
+  return result;
+};
