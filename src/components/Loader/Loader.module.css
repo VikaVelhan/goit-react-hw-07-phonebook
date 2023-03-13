@@ -1,0 +1,13 @@
+.Loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoaderText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: forestgreen;
+  font-weight: 600;
+  font-size: 25px;
+}

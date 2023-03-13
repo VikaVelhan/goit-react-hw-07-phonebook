@@ -38,22 +38,3 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
-
-/*import axios from 'axios';
-import {
-  fetchingInProgress,
-  fetchingSuccess,
-  fetchingError,
-} from './contactSlise';
-
-axios.defaults.baseURL = 'https://640b87ce65d3a01f981d22f4.mockapi.io';
-
-export const fetchContact = () => async dispatch => {
-  try {
-    dispatch(fetchingInProgress());
-    const response = await axios.get('/contact');
-    dispatch(fetchingSuccess(response.data));
-  } catch (e) {
-    dispatch(fetchingError(e.message));
-  }
-};*/

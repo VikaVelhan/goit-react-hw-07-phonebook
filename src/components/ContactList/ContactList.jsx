@@ -30,46 +30,9 @@ const ContactList = () => {
           </li>
         ))
       ) : (
-        <p>No data to display :(</p>
+        <p>No data to display...</p>
       )}
     </ul>
-
-    /*<ul className={css.contactList}>
-      {getVisibleContacts().map(({ id, name, number, avatar }) => (
-        <li className={css.contacItem} key={id}>
-          <div>
-            <img width={50} src={avatar} alt="avatar" />
-            <span>{name}: </span>
-            <br />
-            <span>{number} </span>
-          </div>
-          <button
-            className={css.buttonDelete}
-            onClick={() => {
-              dispatch(deleteContact(id));
-            }}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>*/
-
-    /*<ul className={css.contactList}>
-      {contacts.map(({ id, name, number }) => (
-        <li className={css.contacItem} key={id}>
-          {name}: {number}
-          <button
-            className={css.buttonDelete}
-            onClick={() => {
-              dispatch(deleteContact(id));
-            }}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>*/
   );
 };
 
