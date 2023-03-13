@@ -2,7 +2,7 @@ import css from './ContactForm.module.css';
 
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactSlise';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/selector';
 import Notiflix from 'notiflix';
 
