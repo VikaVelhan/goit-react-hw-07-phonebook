@@ -18,13 +18,8 @@ const ContactList = () => {
       {contacts.length !== 0 ? (
         contacts.map(contact => (
           <li className={css.contacItem} key={contact.id}>
-            <div>
-              <img width={50} src={contact.avatar} alt="avatar" />
-              <span>{contact.name}: </span>
-              <br />
-              <span>{contact.phone} </span>
-            </div>
-
+            <span>{contact.name}:</span>
+            <span>{contact.phone} </span>
             <button
               className={css.buttonDelete}
               type="button"
